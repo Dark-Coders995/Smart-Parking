@@ -1,0 +1,72 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".views.activities.PaymentActivity">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="UPI App :"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/radioAppChoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/app_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Default" />
+
+            <RadioButton
+                android:id="@+id/app_amazonpay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AmazonPay" />
+
+            <RadioButton
+                android:id="@+id/app_bhim_upi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BHIM UPI" />
+
+            <RadioButton
+                android:id="@+id/app_google_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Google Pay" />
+
+            <RadioButton
+                android:id="@+id/app_phonepe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PhonePe" />
+
+            <RadioButton
+                android:id="@+id/app_paytm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PayTm" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Pay with UPI" />
+
+    </LinearLayout>
+</ScrollView>

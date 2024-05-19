@@ -1,0 +1,43 @@
+buildscript {
+    ext {
+
+        agp_version = '7.0.0'
+        compose_version = '1.0.0-beta09'
+        constraintLayoutCompose = '1.0.0-alpha07'
+    }
+
+    ext.kotlin_version = "1.5.10"
+
+
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+
+
+    }
+    ext.hilt_version = '2.35'
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.2.1"
+        //noinspection GradleDependency
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.10"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath 'com.google.gms:google-services:4.3.8'
+        //dagger hilt
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.35"
+        classpath 'com.google.gms:google-services:4.3.8'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        //safe args
+        def nav_version = "2.3.3"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+    }
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

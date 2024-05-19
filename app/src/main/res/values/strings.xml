@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Book Parking</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="card_holder_name">Card holder name</string>
+    <string name="card_holder_number">Card number</string>
+    <string name="expiry_date">Expiry date</string>
+    <string name="cvc">CVC</string>
+    <string name="save">save</string>
+    <string name="don_apos_t_have_an_account_u_sign_up_u">Dont have an account? <u>Sign up</u></string>
+    <string name="time">Time</string>
+    <string name="_1_3_hrs">1 - 3 \nhours</string>
+    <string name="_3_4_hrs">3 - 4 \nhours</string>
+    <string name="_5_7_nhours">5 - 7\nhours</string>
+    <string name="_7_nhours">7+ \nhours</string>
+    <string name="payment">Payment</string>
+    <string name="period">Period</string>
+    <string name="total">Total</string>
+    <string name="rs20">Rs.20.00</string>
+    <string name="rs40">Rs.40.00</string>
+    <string name="rs100">Rs.100.00</string>
+    <string name="rs200">Rs.200.00</string>
+    <string name="rs_00_00">Rs.00.00</string>
+    <string name="valet_parking">Valet Parking</string>
+    <string name="home">Home</string>
+    <string name="my_bookings">My Bookings</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+
+</resources>

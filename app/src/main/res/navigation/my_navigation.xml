@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/locationFragment">
+
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.nero.bookparking.views.fragments.LocationFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_location" >
+        <action
+            android:id="@+id/action_locationFragment_to_slotBookingFragment"
+            app:destination="@id/slotBookingFragment" />
+        <action
+            android:id="@+id/action_locationFragment_to_parkingBookingScreenFragment"
+            app:destination="@id/parkingBookingScreenFragment" />
+        <action
+            android:id="@+id/action_locationFragment_to_paymentConfirmationFragment"
+            app:destination="@id/paymentConfirmationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/visaPaymentFragment"
+        android:name="com.nero.bookparking.ui.payment.VisaPaymentFragment"
+        android:label="Payment" >
+        <action
+            android:id="@+id/action_visaPaymentFragment_to_myBookkingsFramgent"
+            app:destination="@id/nav_my_bookings" />
+    </fragment>
+    <fragment
+        android:id="@+id/slotBookingFragment"
+        android:name="com.nero.bookparking.ui.slotBooking.SlotBookingFragment"
+        android:label="@string/payment"
+        tools:layout="@layout/fragment_slot_booking">
+        <argument
+            android:name="parking"
+            app:argType="com.nero.bookparking.ui.parcalable.ArgsParkingToPayment" />
+        <action
+            android:id="@+id/action_slotBookingFragment_to_visaPaymentFragment"
+            app:destination="@id/visaPaymentFragment" />
+        <action
+            android:id="@+id/action_slotBookingFragment_to_myBookkingsFramgent"
+            app:destination="@id/nav_my_bookings" />
+        <action
+            android:id="@+id/action_slotBookingFragment_to_paymentConfirmationFragment"
+            app:destination="@id/paymentConfirmationFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/parkingBookingScreenFragment"
+        android:name="com.nero.bookparking.ui.presentation.parkingSpotBookingScreen.ParkingBookingScreenFragment"
+        android:label="Book Slot"
+        tools:layout="@layout/fragment_pakring_booking_screen" >
+        <action
+            android:id="@+id/action_parkingBookingScreenFragment_to_slotBookingFragment"
+            app:destination="@id/slotBookingFragment" />
+        <action
+            android:id="@+id/action_parkingBookingScreenFragment_to_slotBookingFragment2"
+            app:destination="@id/slotBookingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_my_bookings"
+        android:name="com.nero.bookparking.ui.presentation.myBookingsScreen.MyBookkingsFramgent"
+        android:label="My Booking"
+        tools:layout="@layout/fragment_my_bookkings_framgent" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/paymentConfirmationFragment"
+        android:name="com.nero.bookparking.views.fragments.PaymentConfirmationFragment"
+        android:label="Payment Confirmation"
+        tools:layout="@layout/fragment_payment_confirmation" >
+        <argument
+            android:name="data"
+            app:argType="com.nero.bookparking.ui.parcalable.ArgsPaymentToConfirmation" />
+        <action
+            android:id="@+id/action_paymentConfirmationFragment_to_nav_my_bookings"
+            app:destination="@id/nav_my_bookings"
+            app:popUpTo="@id/slotBookingFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_paymentConfirmationFragment_to_locationFragment"
+            app:destination="@id/locationFragment"
+            app:popUpTo="@+id/locationFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
