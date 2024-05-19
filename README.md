@@ -8,8 +8,6 @@ Book Parking is a demo application based on MVVM architecture. The app allows us
 <img src="/screenshots/row.png"/>
 </p>
 
-## Download
-Go to the [Releases](https://github.com/nero002/Book-Parking/releases) to download the latest APK.
 
 <img src="/screenshots/appworking.gif" align="right" width="32%"/>
 
